@@ -1,0 +1,17 @@
+AlignConsecutiveAssignments:                    true
+AllowAllArgumentsOnNextLine:                    false
+AllowAllConstructorInitializersOnNextLine:      false
+AllowAllParametersOfDeclarationOnNextLine:      false
+AllowShortFunctionsOnASingleLine:               Empty
+AllowShortBlocksOnASingleLine:                  Empty
+BinPackArguments:                               false
+BinPackParameters:                              false
+BreakInheritanceList:                           AfterColon
+BreakConstructorInitializers:                   AfterColon
+ColumnLimit:                                    160
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth:              2
+ContinuationIndentWidth:                        2
+IndentCaseLabels:                               true
+PenaltyReturnTypeOnItsOwnLine:                  1000000
+TabWidth:                                       2
