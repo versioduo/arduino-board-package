@@ -1,0 +1,318 @@
+# USB vendor        0x6666
+#
+# Every product reserves 16 USB product IDs.
+#
+# Hardware:
+#   axis             0xd980
+#   beat             0xda30
+#   control          0xd920
+#   dmx              0xd9b0
+#   express          0xd930
+#   pad              0xd950
+#   pulse            0xd960
+#   step             0xd9a0
+#   strip            0xda20
+#   wave             0xda40
+#   itsybitsy        0xdf50
+#
+# Firmware:
+#   glockenspiel-37  0xe910 (control)
+#   pedal            0xe930 (itsybitsy)
+#   pedal-2          0xe931 (itsybitsy)
+#   kontra-2         0xe950 (control)
+#   kontra-2-string  0xe960 (step)
+#   schlag-7         0xe970 (control)
+#   schlag-7-stepper 0xe980 (step)
+#   viola-1          0xe9a0 (step)
+#   horn-1           0xe9b0 (control)
+#   frame            0xe9c0 (strip)
+#   cube             0xe9d0 (wave)
+#   attune           0xef20 (step)
+#   pi-14537         0xef30 (control)
+
+
+axis.name=V2 axis
+axis.vid.0=0x6666
+axis.pid.0=0xd980
+axis.build.vid=0x6666
+axis.build.pid=0xd980
+axis.build.mcu=cortex-m4
+axis.build.f_cpu=120000000L
+axis.build.cache_flags=-DENABLE_CACHE
+axis.build.flags.optimize=-O3
+axis.build.usb_product="V2 axis"
+axis.build.usb_manufacturer="Versio Duo"
+axis.build.usb_power=20
+axis.build.board=V2_AXIS
+axis.build.core=arduino
+axis.build.extra_flags=-D__SAMD51G19A__ -DV2_AXIS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+axis.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+axis.build.variant=axis
+axis.build.variant_system_lib=
+axis.upload.tool=bossac
+axis.upload.protocol=sam-ba
+axis.upload.maximum_size=245760
+axis.upload.offset=0x4000
+axis.upload.use_1200bps_touch=true
+axis.upload.wait_for_upload_port=true
+axis.upload.native_usb=true
+
+control.name=V2 control
+control.vid.0=0x6666
+control.pid.0=0xd920
+control.build.vid=0x6666
+control.build.pid=0xd920
+control.build.mcu=cortex-m4
+control.build.f_cpu=120000000L
+control.build.cache_flags=-DENABLE_CACHE
+control.build.flags.optimize=-O3
+control.build.usb_product="V2 control"
+control.build.usb_manufacturer="Versio Duo"
+control.build.usb_power=20
+control.build.board=V2_CONTROL
+control.build.core=arduino
+control.build.extra_flags=-D__SAMD51G19A__ -DV2_CONTROL -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+control.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+control.build.variant=control
+control.build.variant_system_lib=
+control.upload.tool=bossac
+control.upload.protocol=sam-ba
+control.upload.maximum_size=245760
+control.upload.offset=0x4000
+control.upload.use_1200bps_touch=true
+control.upload.wait_for_upload_port=true
+control.upload.native_usb=true
+
+beat.name=V2 beat
+beat.vid.0=0x6666
+beat.pid.0=0xda30
+beat.build.vid=0x6666
+beat.build.pid=0xda30
+beat.build.mcu=cortex-m4
+beat.build.f_cpu=120000000L
+beat.build.cache_flags=-DENABLE_CACHE
+beat.build.flags.optimize=-O3
+beat.build.usb_product="V2 beat"
+beat.build.usb_manufacturer="Versio Duo"
+beat.build.usb_power=20
+beat.build.board=V2_BEAT
+beat.build.core=arduino
+beat.build.extra_flags=-D__SAMD51G19A__ -DV2_BEAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+beat.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+beat.build.variant=beat
+beat.build.variant_system_lib=
+beat.upload.tool=bossac
+beat.upload.protocol=sam-ba
+beat.upload.maximum_size=245760
+beat.upload.offset=0x4000
+beat.upload.use_1200bps_touch=true
+beat.upload.wait_for_upload_port=true
+beat.upload.native_usb=true
+
+dmx.name=V2 dmx
+dmx.vid.0=0x6666
+dmx.pid.0=0xd9b0
+dmx.build.vid=0x6666
+dmx.build.pid=0xd9b0
+dmx.build.mcu=cortex-m4
+dmx.build.f_cpu=120000000L
+dmx.build.cache_flags=-DENABLE_CACHE
+dmx.build.flags.optimize=-O3
+dmx.build.usb_product="V2 dmx"
+dmx.build.usb_manufacturer="Versio Duo"
+dmx.build.usb_power=20
+dmx.build.board=V2_DMX
+dmx.build.core=arduino
+dmx.build.extra_flags=-D__SAMD51G19A__ -DV2_DMX -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+dmx.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+dmx.build.variant=dmx
+dmx.build.variant_system_lib=
+dmx.upload.tool=bossac
+dmx.upload.protocol=sam-ba
+dmx.upload.maximum_size=245760
+dmx.upload.offset=0x4000
+dmx.upload.use_1200bps_touch=true
+dmx.upload.wait_for_upload_port=true
+dmx.upload.native_usb=true
+
+express.name=V2 express
+express.vid.0=0x6666
+express.pid.0=0xd930
+express.build.vid=0x6666
+express.build.pid=0xd930
+express.build.mcu=cortex-m4
+express.build.f_cpu=120000000L
+express.build.cache_flags=-DENABLE_CACHE
+express.build.flags.optimize=-O3
+express.build.usb_product="V2 express"
+express.build.usb_manufacturer="Versio Duo"
+express.build.usb_power=20
+express.build.board=V2_EXPRESS
+express.build.core=arduino
+express.build.extra_flags=-D__SAMD51J19A__ -DV2_EXPRESS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+express.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+express.build.variant=express
+express.build.variant_system_lib=
+express.upload.tool=bossac
+express.upload.protocol=sam-ba
+express.upload.maximum_size=245760
+express.upload.offset=0x4000
+express.upload.use_1200bps_touch=true
+express.upload.wait_for_upload_port=true
+express.upload.native_usb=true
+
+pad.name=V2 pad
+pad.vid.0=0x6666
+pad.pid.0=0xd950
+pad.build.vid=0x6666
+pad.build.pid=0xd950
+pad.build.mcu=cortex-m4
+pad.build.f_cpu=120000000L
+pad.build.cache_flags=-DENABLE_CACHE
+pad.build.flags.optimize=-O3
+pad.build.usb_product="V2 pad"
+pad.build.usb_manufacturer="Versio Duo"
+pad.build.usb_power=20
+pad.build.board=V2_PAD
+pad.build.core=arduino
+pad.build.extra_flags=-D__SAMD51G19A__ -DV2_PAD -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+pad.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+pad.build.variant=pad
+pad.build.variant_system_lib=
+pad.upload.tool=bossac
+pad.upload.protocol=sam-ba
+pad.upload.maximum_size=245760
+pad.upload.offset=0x4000
+pad.upload.use_1200bps_touch=true
+pad.upload.wait_for_upload_port=true
+pad.upload.native_usb=true
+
+pulse.name=V2 pulse
+pulse.vid.0=0x6666
+pulse.pid.0=0xd960
+pulse.build.vid=0x6666
+pulse.build.pid=0xd960
+pulse.build.mcu=cortex-m4
+pulse.build.f_cpu=120000000L
+pulse.build.cache_flags=-DENABLE_CACHE
+pulse.build.flags.optimize=-O3
+pulse.build.usb_product="V2 pulse"
+pulse.build.usb_manufacturer="Versio Duo"
+pulse.build.usb_power=20
+pulse.build.board=V2_PULSE
+pulse.build.core=arduino
+pulse.build.extra_flags=-D__SAMD51J19A__ -DV2_PULSE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+pulse.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+pulse.build.variant=pulse
+pulse.build.variant_system_lib=
+pulse.upload.tool=bossac
+pulse.upload.protocol=sam-ba
+pulse.upload.maximum_size=245760
+pulse.upload.offset=0x4000
+pulse.upload.use_1200bps_touch=true
+pulse.upload.wait_for_upload_port=true
+pulse.upload.native_usb=true
+
+step.name=V2 step
+step.vid.0=0x6666
+step.pid.0=0xd9a0
+step.build.vid=0x6666
+step.build.pid=0xd9a0
+step.build.mcu=cortex-m4
+step.build.f_cpu=120000000L
+step.build.cache_flags=-DENABLE_CACHE
+step.build.flags.optimize=-O3
+step.build.usb_product="V2 step"
+step.build.usb_manufacturer="Versio Duo"
+step.build.usb_power=20
+step.build.board=V2_STEP
+step.build.core=arduino
+step.build.extra_flags=-D__SAMD51J19A__ -DV2_STEP -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+step.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+step.build.variant=step
+step.build.variant_system_lib=
+step.upload.tool=bossac
+step.upload.protocol=sam-ba
+step.upload.maximum_size=245760
+step.upload.offset=0x4000
+step.upload.use_1200bps_touch=true
+step.upload.wait_for_upload_port=true
+step.upload.native_usb=true
+
+strip.name=V2 strip
+strip.vid.0=0x6666
+strip.pid.0=0xda20
+strip.build.vid=0x6666
+strip.build.pid=0xda20
+strip.build.mcu=cortex-m4
+strip.build.f_cpu=120000000L
+strip.build.cache_flags=-DENABLE_CACHE
+strip.build.flags.optimize=-O3
+strip.build.usb_product="V2 strip"
+strip.build.usb_manufacturer="Versio Duo"
+strip.build.usb_power=20
+strip.build.board=V2_DMX
+strip.build.core=arduino
+strip.build.extra_flags=-D__SAMD51G19A__ -DV2_STRIP -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+strip.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+strip.build.variant=strip
+strip.build.variant_system_lib=
+strip.upload.tool=bossac
+strip.upload.protocol=sam-ba
+strip.upload.maximum_size=245760
+strip.upload.offset=0x4000
+strip.upload.use_1200bps_touch=true
+strip.upload.wait_for_upload_port=true
+strip.upload.native_usb=true
+
+wave.name=V2 wave
+wave.vid.0=0x6666
+wave.pid.0=0xda40
+wave.build.vid=0x6666
+wave.build.pid=0xda40
+wave.build.mcu=cortex-m4
+wave.build.f_cpu=120000000L
+wave.build.cache_flags=-DENABLE_CACHE
+wave.build.flags.optimize=-O3
+wave.build.usb_product="V2 wave"
+wave.build.usb_manufacturer="Versio Duo"
+wave.build.usb_power=20
+wave.build.board=V2_WAVE
+wave.build.core=arduino
+wave.build.extra_flags=-D__SAMD51J19A__ -DV2_WAVE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+wave.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+wave.build.variant=wave
+wave.build.variant_system_lib=
+wave.upload.tool=bossac
+wave.upload.protocol=sam-ba
+wave.upload.maximum_size=245760
+wave.upload.offset=0x4000
+wave.upload.use_1200bps_touch=true
+wave.upload.wait_for_upload_port=true
+wave.upload.native_usb=true
+
+itsybitsy.name=V2 itsybitsy
+itsybitsy.vid.0=0x6666
+itsybitsy.pid.0=0xdf50
+itsybitsy.build.vid=0x6666
+itsybitsy.build.pid=0xdf50
+itsybitsy.build.mcu=cortex-m4
+itsybitsy.build.f_cpu=120000000L
+itsybitsy.build.cache_flags=-DENABLE_CACHE
+itsybitsy.build.flags.optimize=-O3
+itsybitsy.build.usb_product="V2 itsybitsy"
+itsybitsy.build.usb_manufacturer="Versio Duo"
+itsybitsy.build.usb_power=20
+itsybitsy.build.board=V2_ITSYBITSY
+itsybitsy.build.core=arduino
+itsybitsy.build.extra_flags=-D__SAMD51G19A__ -DV2_ITSYBITSY -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -DCRYSTALLESS -mfloat-abi=hard -mfpu=fpv4-sp-d16
+itsybitsy.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+itsybitsy.build.variant=itsybitsy
+itsybitsy.build.variant_system_lib=
+itsybitsy.upload.tool=bossac
+itsybitsy.upload.protocol=sam-ba
+itsybitsy.upload.maximum_size=245760
+itsybitsy.upload.offset=0x4000
+itsybitsy.upload.use_1200bps_touch=true
+itsybitsy.upload.wait_for_upload_port=true
+itsybitsy.upload.native_usb=true
