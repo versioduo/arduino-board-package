@@ -19,6 +19,7 @@
 #   serial           0xd990
 #   step             0xd9a0
 #   strip            0xda10
+#   trust            0xda20
 #   itsybitsy        0xdf50
 #
 # Firmware:
