@@ -25,11 +25,9 @@ extern "C" {
 
 enum {
   PIN_LED_ONBOARD,
-  PIN_SERIAL_PLUG_RX,
-  PIN_SERIAL_PLUG_TX,
-  PIN_SERIAL_SOCKET_RX,
-  PIN_SERIAL_SOCKET_TX,
-  PIN_SOCKET_SENSE,
+  PIN_SERIAL_MIDI_RX,
+  PIN_SERIAL_MIDI_TX,
+  PIN_BUTTON,
   PIN_LED_WS2812,
   PIN_CHANNEL_SENSE,
   PIN_MAX = PIN_CHANNEL_SENSE + 16,
@@ -71,7 +69,5 @@ extern SERCOM sercom2;
 extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
-extern Uart SerialPlug;
-extern Uart SerialSocket;
-void setSerialPriority(Uart *uart, uint8_t level);
+extern Uart SerialMIDI;
 #endif
