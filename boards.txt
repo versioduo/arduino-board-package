@@ -9,6 +9,7 @@
 #   dmx              0xd9b0
 #   express          0xd930
 #   pad              0xd950
+#   pps              0xda50
 #   pulse            0xd960
 #   step             0xd9a0
 #   strip            0xda20
@@ -30,7 +31,6 @@
 #   attune           0xef20 (step)
 #   pi-14537         0xef30 (control)
 #   sax              0xef40 (express)
-#   CatThing         0xef50 (strip)
 
 axis.name=V2 axis
 axis.vid.0=0x6666
@@ -161,6 +161,32 @@ express.upload.offset=0x4000
 express.upload.use_1200bps_touch=true
 express.upload.wait_for_upload_port=true
 express.upload.native_usb=true
+
+step.name=V2 pps
+pps.vid.0=0x6666
+pps.pid.0=0xda50
+pps.build.vid=0x6666
+pps.build.pid=0xda50
+pps.build.mcu=cortex-m4
+pps.build.f_cpu=120000000L
+pps.build.cache_flags=-DENABLE_CACHE
+pps.build.flags.optimize=-O3
+pps.build.usb_product="V2 pps"
+pps.build.usb_manufacturer="Versio Duo"
+pps.build.usb_power=20
+pps.build.board=V2_PPS
+pps.build.core=arduino
+pps.build.extra_flags=-D__SAMD51J19A__ -DV2_PPS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+pps.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+pps.build.variant=pps
+pps.build.variant_system_lib=
+pps.upload.tool=bossac
+pps.upload.protocol=sam-ba
+pps.upload.maximum_size=245760
+pps.upload.offset=0x4000
+pps.upload.use_1200bps_touch=true
+pps.upload.wait_for_upload_port=true
+pps.upload.native_usb=true
 
 pad.name=V2 pad
 pad.vid.0=0x6666
