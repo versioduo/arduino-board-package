@@ -8,9 +8,9 @@
 #   control          0xd920
 #   dmx              0xd9b0
 #   express          0xd930
-#   pad              0xd950
-#   pps              0xda50
+#   hihat            0xda50
 #   pulse            0xd960
+#   radio            0xda60
 #   step             0xd9a0
 #   strip            0xda20
 #   wave             0xda40
@@ -25,7 +25,6 @@
 #   schlag-7         0xe970 (control)
 #   schlag-7-stepper 0xe980 (step)
 #   viola-1          0xe9a0 (step)
-#   horn-1           0xe9b0 (control)
 #   frame            0xe9c0 (strip)
 #   cube             0xe9d0 (wave)
 #   attune           0xef20 (step)
@@ -162,57 +161,31 @@ express.upload.use_1200bps_touch=true
 express.upload.wait_for_upload_port=true
 express.upload.native_usb=true
 
-step.name=V2 pps
-pps.vid.0=0x6666
-pps.pid.0=0xda50
-pps.build.vid=0x6666
-pps.build.pid=0xda50
-pps.build.mcu=cortex-m4
-pps.build.f_cpu=120000000L
-pps.build.cache_flags=-DENABLE_CACHE
-pps.build.flags.optimize=-O3
-pps.build.usb_product="V2 pps"
-pps.build.usb_manufacturer="Versio Duo"
-pps.build.usb_power=20
-pps.build.board=V2_PPS
-pps.build.core=arduino
-pps.build.extra_flags=-D__SAMD51J19A__ -DV2_PPS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
-pps.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-pps.build.variant=pps
-pps.build.variant_system_lib=
-pps.upload.tool=bossac
-pps.upload.protocol=sam-ba
-pps.upload.maximum_size=245760
-pps.upload.offset=0x4000
-pps.upload.use_1200bps_touch=true
-pps.upload.wait_for_upload_port=true
-pps.upload.native_usb=true
-
-pad.name=V2 pad
-pad.vid.0=0x6666
-pad.pid.0=0xd950
-pad.build.vid=0x6666
-pad.build.pid=0xd950
-pad.build.mcu=cortex-m4
-pad.build.f_cpu=120000000L
-pad.build.cache_flags=-DENABLE_CACHE
-pad.build.flags.optimize=-O3
-pad.build.usb_product="V2 pad"
-pad.build.usb_manufacturer="Versio Duo"
-pad.build.usb_power=20
-pad.build.board=V2_PAD
-pad.build.core=arduino
-pad.build.extra_flags=-D__SAMD51G19A__ -DV2_PAD -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
-pad.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-pad.build.variant=pad
-pad.build.variant_system_lib=
-pad.upload.tool=bossac
-pad.upload.protocol=sam-ba
-pad.upload.maximum_size=245760
-pad.upload.offset=0x4000
-pad.upload.use_1200bps_touch=true
-pad.upload.wait_for_upload_port=true
-pad.upload.native_usb=true
+hihat.name=V2 hihat
+hihat.vid.0=0x6666
+hihat.pid.0=0xda50
+hihat.build.vid=0x6666
+hihat.build.pid=0xda50
+hihat.build.mcu=cortex-m4
+hihat.build.f_cpu=120000000L
+hihat.build.cache_flags=-DENABLE_CACHE
+hihat.build.flags.optimize=-O3
+hihat.build.usb_product="V2 hihat"
+hihat.build.usb_manufacturer="Versio Duo"
+hihat.build.usb_power=20
+hihat.build.board=V2_HIHAT
+hihat.build.core=arduino
+hihat.build.extra_flags=-D__SAMD51J19A__ -DV2_HIHAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+hihat.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+hihat.build.variant=hihat
+hihat.build.variant_system_lib=
+hihat.upload.tool=bossac
+hihat.upload.protocol=sam-ba
+hihat.upload.maximum_size=245760
+hihat.upload.offset=0x4000
+hihat.upload.use_1200bps_touch=true
+hihat.upload.wait_for_upload_port=true
+hihat.upload.native_usb=true
 
 pulse.name=V2 pulse
 pulse.vid.0=0x6666
@@ -239,6 +212,32 @@ pulse.upload.offset=0x4000
 pulse.upload.use_1200bps_touch=true
 pulse.upload.wait_for_upload_port=true
 pulse.upload.native_usb=true
+
+radio.name=V2 radio
+radio.vid.0=0x6666
+radio.pid.0=0xda60
+radio.build.vid=0x6666
+radio.build.pid=0xda60
+radio.build.mcu=cortex-m4
+radio.build.f_cpu=120000000L
+radio.build.cache_flags=-DENABLE_CACHE
+radio.build.flags.optimize=-O3
+radio.build.usb_product="V2 radio"
+radio.build.usb_manufacturer="Versio Duo"
+radio.build.usb_power=20
+radio.build.board=V2_RADIO
+radio.build.core=arduino
+radio.build.extra_flags=-D__SAMD51G19A__ -DV2_RADIO -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+radio.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+radio.build.variant=radio
+radio.build.variant_system_lib=
+radio.upload.tool=bossac
+radio.upload.protocol=sam-ba
+radio.upload.maximum_size=245760
+radio.upload.offset=0x4000
+radio.upload.use_1200bps_touch=true
+radio.upload.wait_for_upload_port=true
+radio.upload.native_usb=true
 
 step.name=V2 step
 step.vid.0=0x6666
