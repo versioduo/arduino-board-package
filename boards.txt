@@ -11,6 +11,7 @@
 #   hihat            0xda50
 #   pulse            0xd960
 #   radio            0xda60
+#   sax              0xda70
 #   step             0xd9a0
 #   strip            0xda20
 #   wave             0xda40
@@ -238,6 +239,32 @@ radio.upload.offset=0x4000
 radio.upload.use_1200bps_touch=true
 radio.upload.wait_for_upload_port=true
 radio.upload.native_usb=true
+
+sax.name=V2 sax
+sax.vid.0=0x6666
+sax.pid.0=0xda70
+sax.build.vid=0x6666
+sax.build.pid=0xda70
+sax.build.mcu=cortex-m4
+sax.build.f_cpu=120000000L
+sax.build.cache_flags=-DENABLE_CACHE
+sax.build.flags.optimize=-O3
+sax.build.usb_product="V2 sax"
+sax.build.usb_manufacturer="Versio Duo"
+sax.build.usb_power=20
+sax.build.board=V2_SAX
+sax.build.core=arduino
+sax.build.extra_flags=-D__SAMD51J19A__ -DV2_SAX -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+sax.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+sax.build.variant=sax
+sax.build.variant_system_lib=
+sax.upload.tool=bossac
+sax.upload.protocol=sam-ba
+sax.upload.maximum_size=245760
+sax.upload.offset=0x4000
+sax.upload.use_1200bps_touch=true
+sax.upload.wait_for_upload_port=true
+sax.upload.native_usb=true
 
 step.name=V2 step
 step.vid.0=0x6666
