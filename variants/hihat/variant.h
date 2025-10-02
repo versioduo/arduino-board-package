@@ -32,21 +32,34 @@ enum {
   PIN_SERIAL_SOCKET_RX,
   PIN_SERIAL_SOCKET_TX,
   PIN_SERIAL_SOCKET_TX_ENABLE,
-  PIN_SOCKET_SENSE,
   PIN_LED_WS2812,
+  PIN_LED_WS2812_EXT,
   PIN_POWER_ENABLE,
   PIN_RESISTANCE_SENSE,
   PIN_VOLTAGE_SENSE,
   PIN_CURRENT_SENSE,
   PIN_PWM_CHANNEL,
-#define PIN_REVISION_BITS 1
-  PIN_REVISION = PIN_PWM_CHANNEL + 16,
+  PIN_SPI_MISO = PIN_PWM_CHANNEL + 2,
+  PIN_SPI_SCK,
+  PIN_SPI_MOSI,
+  PIN_STEPPER_ENABLE,
+  PIN_STEPPER_SELECT,
+  PIN_STEPPER_STEP,
   PIN_MAX,
 };
 
 #define LED_BUILTIN PIN_LED_ONBOARD
 
 #define digitalPinToBitMask(P) (1 << g_APinDescription[P].ulPin)
+
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
+static const uint8_t SCK  = PIN_SPI_SCK;
+
+#define SPI_INTERFACES_COUNT 1
+#define PERIPH_SPI sercom1
+#define PAD_SPI_TX SPI_PAD_3_SCK_1
+#define PAD_SPI_RX SERCOM_RX_PAD_0
 
 // Dummy definitions to satisfy compilation of core and libraries
 #define PIN_A0 (0ul)
@@ -64,10 +77,6 @@ static const uint8_t A3 = PIN_A3;
 #define PIN_USB_HOST_ENABLE (0ul)
 #define PIN_USB_DM (0ul)
 #define PIN_USB_DP (0ul)
-
-static const uint8_t MOSI = (0ul);
-static const uint8_t MISO = (0ul);
-static const uint8_t SCK  = (0ul);
 
 #ifdef __cplusplus
 }

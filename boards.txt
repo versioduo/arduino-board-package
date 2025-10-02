@@ -30,7 +30,6 @@
 #   cube             0xe9d0 (wave)
 #   attune           0xef20 (step)
 #   pi-14537         0xef30 (control)
-#   sax              0xef40 (express)
 
 axis.name=V2 axis
 axis.vid.0=0x6666
