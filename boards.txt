@@ -45,7 +45,7 @@ axis.build.usb_manufacturer="Versio Duo"
 axis.build.usb_power=20
 axis.build.board=V2_AXIS
 axis.build.core=arduino
-axis.build.extra_flags=-D__SAMD51G19A__ -DV2_AXIS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+axis.build.extra_flags=-D__SAMD51G19A__ -DV2_AXIS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 axis.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 axis.build.variant=axis
 axis.build.variant_system_lib=
@@ -71,7 +71,7 @@ control.build.usb_manufacturer="Versio Duo"
 control.build.usb_power=20
 control.build.board=V2_CONTROL
 control.build.core=arduino
-control.build.extra_flags=-D__SAMD51G19A__ -DV2_CONTROL -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+control.build.extra_flags=-D__SAMD51G19A__ -DV2_CONTROL -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 control.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 control.build.variant=control
 control.build.variant_system_lib=
@@ -97,7 +97,7 @@ beat.build.usb_manufacturer="Versio Duo"
 beat.build.usb_power=20
 beat.build.board=V2_BEAT
 beat.build.core=arduino
-beat.build.extra_flags=-D__SAMD51G19A__ -DV2_BEAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+beat.build.extra_flags=-D__SAMD51G19A__ -DV2_BEAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 beat.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 beat.build.variant=beat
 beat.build.variant_system_lib=
@@ -149,7 +149,7 @@ express.build.usb_manufacturer="Versio Duo"
 express.build.usb_power=20
 express.build.board=V2_EXPRESS
 express.build.core=arduino
-express.build.extra_flags=-D__SAMD51J19A__ -DV2_EXPRESS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+express.build.extra_flags=-D__SAMD51J19A__ -DV2_EXPRESS -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 express.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 express.build.variant=express
 express.build.variant_system_lib=
@@ -175,7 +175,7 @@ hihat.build.usb_manufacturer="Versio Duo"
 hihat.build.usb_power=20
 hihat.build.board=V2_HIHAT
 hihat.build.core=arduino
-hihat.build.extra_flags=-D__SAMD51J19A__ -DV2_HIHAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+hihat.build.extra_flags=-D__SAMD51J19A__ -DV2_HIHAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 hihat.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 hihat.build.variant=hihat
 hihat.build.variant_system_lib=
@@ -201,7 +201,7 @@ pulse.build.usb_manufacturer="Versio Duo"
 pulse.build.usb_power=20
 pulse.build.board=V2_PULSE
 pulse.build.core=arduino
-pulse.build.extra_flags=-D__SAMD51J19A__ -DV2_PULSE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+pulse.build.extra_flags=-D__SAMD51J19A__ -DV2_PULSE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 pulse.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 pulse.build.variant=pulse
 pulse.build.variant_system_lib=
@@ -227,7 +227,7 @@ radio.build.usb_manufacturer="Versio Duo"
 radio.build.usb_power=20
 radio.build.board=V2_RADIO
 radio.build.core=arduino
-radio.build.extra_flags=-D__SAMD51G19A__ -DV2_RADIO -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+radio.build.extra_flags=-D__SAMD51G19A__ -DV2_RADIO -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 radio.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 radio.build.variant=radio
 radio.build.variant_system_lib=
@@ -253,7 +253,7 @@ sax.build.usb_manufacturer="Versio Duo"
 sax.build.usb_power=20
 sax.build.board=V2_SAX
 sax.build.core=arduino
-sax.build.extra_flags=-D__SAMD51J19A__ -DV2_SAX -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+sax.build.extra_flags=-D__SAMD51J19A__ -DV2_SAX -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 sax.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 sax.build.variant=sax
 sax.build.variant_system_lib=
@@ -279,7 +279,7 @@ step.build.usb_manufacturer="Versio Duo"
 step.build.usb_power=20
 step.build.board=V2_STEP
 step.build.core=arduino
-step.build.extra_flags=-D__SAMD51J19A__ -DV2_STEP -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+step.build.extra_flags=-D__SAMD51J19A__ -DV2_STEP -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 step.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 step.build.variant=step
 step.build.variant_system_lib=
@@ -331,7 +331,7 @@ wave.build.usb_manufacturer="Versio Duo"
 wave.build.usb_power=20
 wave.build.board=V2_WAVE
 wave.build.core=arduino
-wave.build.extra_flags=-D__SAMD51J19A__ -DV2_WAVE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
+wave.build.extra_flags=-D__SAMD51J19A__ -DV2_WAVE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 wave.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 wave.build.variant=wave
 wave.build.variant_system_lib=

@@ -1,5 +1,3 @@
-// V2 - step
-
 #include "variant.h"
 
 const PinDescription g_APinDescription[PIN_MAX] = {
