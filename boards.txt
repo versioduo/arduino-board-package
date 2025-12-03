@@ -10,7 +10,7 @@
 #   control          0xd920
 #   dmx              0xd9b0
 #   express          0xd930
-#   hihat            0xda50
+#   drum             0xda50
 #   pulse            0xd960
 #   radio            0xda60
 #   sax              0xda70
@@ -30,6 +30,7 @@
 #   viola-1          0xe9a0 (step)
 #   frame            0xe9c0 (strip)
 #   cube             0xe9d0 (wave)
+#   hihat            0xe9e0 (drum)
 #   attune           0xef20 (step)
 #   pi-14537         0xef30 (control)
 
@@ -163,31 +164,31 @@ express.upload.use_1200bps_touch=true
 express.upload.wait_for_upload_port=true
 express.upload.native_usb=true
 
-hihat.name=V2 hihat
-hihat.vid.0=0x6666
-hihat.pid.0=0xda50
-hihat.build.vid=0x6666
-hihat.build.pid=0xda50
-hihat.build.mcu=cortex-m4
-hihat.build.f_cpu=120000000L
-hihat.build.cache_flags=-DENABLE_CACHE
-hihat.build.flags.optimize=-O3
-hihat.build.usb_product="V2 hihat"
-hihat.build.usb_manufacturer="Versio Duo"
-hihat.build.usb_power=20
-hihat.build.board=V2_HIHAT
-hihat.build.core=arduino
-hihat.build.extra_flags=-D__SAMD51J19A__ -DV2_HIHAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
-hihat.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-hihat.build.variant=hihat
-hihat.build.variant_system_lib=
-hihat.upload.tool=bossac
-hihat.upload.protocol=sam-ba
-hihat.upload.maximum_size=245760
-hihat.upload.offset=0x4000
-hihat.upload.use_1200bps_touch=true
-hihat.upload.wait_for_upload_port=true
-hihat.upload.native_usb=true
+drum.name=V2 drum
+drum.vid.0=0x6666
+drum.pid.0=0xe9e0
+drum.build.vid=0x6666
+drum.build.pid=0xe9e0
+drum.build.mcu=cortex-m4
+drum.build.f_cpu=120000000L
+drum.build.cache_flags=-DENABLE_CACHE
+drum.build.flags.optimize=-O3
+drum.build.usb_product="V2 drum"
+drum.build.usb_manufacturer="Versio Duo"
+drum.build.usb_power=20
+drum.build.board=V2_HIHAT
+drum.build.core=arduino
+drum.build.extra_flags=-D__SAMD51J19A__ -DV2_HIHAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+drum.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+drum.build.variant=drum
+drum.build.variant_system_lib=
+drum.upload.tool=bossac
+drum.upload.protocol=sam-ba
+drum.upload.maximum_size=245760
+drum.upload.offset=0x4000
+drum.upload.use_1200bps_touch=true
+drum.upload.wait_for_upload_port=true
+drum.upload.native_usb=true
 
 pulse.name=V2 pulse
 pulse.vid.0=0x6666

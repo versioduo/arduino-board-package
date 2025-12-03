@@ -1,5 +1,5 @@
 name=Versio Duo
-version=196
+version=197
 
 # Compile variables
 # -----------------
