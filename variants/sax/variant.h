@@ -25,17 +25,33 @@ extern "C" {
 
 enum {
   PIN_LED_ONBOARD,
-  PIN_SERIAL_MIDI_RX,
-  PIN_SERIAL_MIDI_TX,
+  PIN_SERIAL_PLUG_RX,
+  PIN_SERIAL_PLUG_TX,
+  PIN_SERIAL_PLUG_TX_ENABLE,
   PIN_BUTTON,
   PIN_LED_WS2812,
   PIN_CHANNEL_SENSE,
-  PIN_MAX = PIN_CHANNEL_SENSE + 8,
+  PIN_I2C_SCL = PIN_CHANNEL_SENSE + 8,
+  PIN_I2C_SDA,
+  PIN_SENSOR_INTERRUPT,
+  PIN_MAX,
 };
 
 #define LED_BUILTIN PIN_LED_ONBOARD
 
 #define digitalPinToBitMask(P) (1 << g_APinDescription[P].ulPin)
+
+#define WIRE_INTERFACES_COUNT 1
+#define PIN_WIRE_SDA (PIN_I2C_SDA)
+#define PIN_WIRE_SCL (PIN_I2C_SCL)
+#define PERIPH_WIRE sercom1
+#define WIRE_IT_HANDLER SERCOM1_Handler
+#define WIRE_IT_HANDLER_0 SERCOM1_0_Handler
+#define WIRE_IT_HANDLER_1 SERCOM1_1_Handler
+#define WIRE_IT_HANDLER_2 SERCOM1_2_Handler
+#define WIRE_IT_HANDLER_3 SERCOM1_3_Handler
+static const uint8_t SDA = PIN_WIRE_SDA;
+static const uint8_t SCL = PIN_WIRE_SCL;
 
 // Dummy definitions to satisfy compilation of core and libraries
 #define PIN_A0 (0ul)
@@ -70,4 +86,6 @@ extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
 extern Uart SerialMIDI;
+extern Uart SerialPlug;
+void setSerialPriority(Uart *uart, uint8_t level);
 #endif
