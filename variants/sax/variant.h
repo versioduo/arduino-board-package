@@ -85,7 +85,6 @@ extern SERCOM sercom2;
 extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
-extern Uart SerialMIDI;
 extern Uart SerialPlug;
 void setSerialPriority(Uart *uart, uint8_t level);
 #endif
