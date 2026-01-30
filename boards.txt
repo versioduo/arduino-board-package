@@ -31,6 +31,7 @@
 #   frame            0xe9c0 (strip)
 #   cube             0xe9d0 (wave)
 #   hihat            0xe9e0 (drum)
+#   snare            0xe9f0 (drum)
 #   attune           0xef20 (step)
 #   pi-14537         0xef30 (control)
 
