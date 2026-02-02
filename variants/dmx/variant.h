@@ -25,6 +25,8 @@ extern "C" {
 
 enum {
   PIN_LED_ONBOARD,
+  PIN_SERIAL_MIDI_RX,
+  PIN_SERIAL_MIDI_TX,
   PIN_DMX_TX,
   PIN_LED_WS2812,
   PIN_BUTTON,
@@ -69,4 +71,5 @@ extern SERCOM sercom2;
 extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
+extern Uart SerialMIDI;
 #endif
