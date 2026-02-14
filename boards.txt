@@ -8,6 +8,7 @@
 #   axis             0xd980
 #   beat             0xda30
 #   control          0xd920
+#   connect          0xda80
 #   dmx              0xd9b0
 #   express          0xd930
 #   drum             0xda50
@@ -25,6 +26,7 @@
 #   pedal-2          0xe931 (itsybitsy)
 #   kontra-2         0xe950 (control)
 #   kontra-2-string  0xe960 (step)
+#   sax              0xea00 (connect)
 #   schlag-7         0xe970 (control)
 #   schlag-7-stepper 0xe980 (step)
 #   viola-1          0xe9a0 (step)
@@ -112,6 +114,32 @@ beat.upload.offset=0x4000
 beat.upload.use_1200bps_touch=true
 beat.upload.wait_for_upload_port=true
 beat.upload.native_usb=true
+
+connect.name=V2 connect
+connect.vid.0=0x6666
+connect.pid.0=0xda70
+connect.build.vid=0x6666
+connect.build.pid=0xda80
+connect.build.mcu=cortex-m4
+connect.build.f_cpu=120000000L
+connect.build.cache_flags=-DENABLE_CACHE
+connect.build.flags.optimize=-O3
+connect.build.usb_product="V2 connect"
+connect.build.usb_manufacturer="Versio Duo"
+connect.build.usb_power=20
+connect.build.board=V2_CONNECT
+connect.build.core=arduino
+connect.build.extra_flags=-D__SAMD51J19A__ -DV2_CONNECT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+connect.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+connect.build.variant=connect
+connect.build.variant_system_lib=
+connect.upload.tool=bossac
+connect.upload.protocol=sam-ba
+connect.upload.maximum_size=245760
+connect.upload.offset=0x4000
+connect.upload.use_1200bps_touch=true
+connect.upload.wait_for_upload_port=true
+connect.upload.native_usb=true
 
 dmx.name=V2 dmx
 dmx.vid.0=0x6666
