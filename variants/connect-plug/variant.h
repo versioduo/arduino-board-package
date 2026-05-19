@@ -28,7 +28,6 @@ enum {
   PIN_SERIAL_PLUG_RX,
   PIN_SERIAL_PLUG_TX,
   PIN_SERIAL_PLUG_TX_ENABLE,
-  PIN_BUTTON,
   PIN_SERIAL_MIDI_RX,
   PIN_SERIAL_MIDI_TX,
   PIN_MAX,
@@ -71,6 +70,6 @@ extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
 extern Uart SerialMIDI;
-extern Uart SerialSocket;
+extern Uart SerialPlug;
 void setSerialPriority(Uart *uart, uint8_t level);
 #endif
