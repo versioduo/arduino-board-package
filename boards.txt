@@ -17,6 +17,7 @@
 #   radio            0xda60
 #   sax              0xda70
 #   step             0xd9a0
+#   tee              0xdaa0
 #   strip            0xda20
 #   wave             0xda40
 #   itsybitsy        0xdf50
@@ -129,7 +130,7 @@ connect-plug.build.usb_manufacturer="Versio Duo"
 connect-plug.build.usb_power=20
 connect-plug.build.board=V2_CONNECT_PLUG
 connect-plug.build.core=arduino
-connect-plug.build.extra_flags=-D__SAMD51J19A__ -DV2_CONNECT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+connect-plug.build.extra_flags=-D__SAMD51J19A__ -DV2_CONNECT_PLUG -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 connect-plug.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 connect-plug.build.variant=connect-plug
 connect-plug.build.variant_system_lib=
@@ -155,7 +156,7 @@ connect-socket.build.usb_manufacturer="Versio Duo"
 connect-socket.build.usb_power=20
 connect-socket.build.board=V2_CONNECT_SOCKET
 connect-socket.build.core=arduino
-connect-socket.build.extra_flags=-D__SAMD51J19A__ -DV2_CONNECT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+connect-socket.build.extra_flags=-D__SAMD51J19A__ -DV2_CONNECT_SOCKET -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
 connect-socket.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 connect-socket.build.variant=connect-socket
 connect-socket.build.variant_system_lib=
@@ -374,6 +375,32 @@ strip.upload.offset=0x4000
 strip.upload.use_1200bps_touch=true
 strip.upload.wait_for_upload_port=true
 strip.upload.native_usb=true
+
+tee.name=V2 tee
+tee.vid.0=0x6666
+tee.pid.0=0xdaa0
+tee.build.vid=0x6666
+tee.build.pid=0xda80
+tee.build.mcu=cortex-m4
+tee.build.f_cpu=120000000L
+tee.build.cache_flags=-DENABLE_CACHE
+tee.build.flags.optimize=-O3
+tee.build.usb_product="V2 tee"
+tee.build.usb_manufacturer="Versio Duo"
+tee.build.usb_power=20
+tee.build.board=V2_TEE
+tee.build.core=arduino
+tee.build.extra_flags=-D__SAMD51J19A__ -DV2_TEE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+tee.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+tee.build.variant=tee
+tee.build.variant_system_lib=
+tee.upload.tool=bossac
+tee.upload.protocol=sam-ba
+tee.upload.maximum_size=245760
+tee.upload.offset=0x4000
+tee.upload.use_1200bps_touch=true
+tee.upload.wait_for_upload_port=true
+tee.upload.native_usb=true
 
 wave.name=V2 wave
 wave.vid.0=0x6666

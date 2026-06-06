@@ -100,5 +100,6 @@ void setSerialPriority(Uart *uart, uint8_t level) {
     NVIC_SetPriority(SERCOM3_1_IRQn, level);
     NVIC_SetPriority(SERCOM3_2_IRQn, level);
     NVIC_SetPriority(SERCOM3_3_IRQn, level);
-  }
+  } else
+    abort();
 }
