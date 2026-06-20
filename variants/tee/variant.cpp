@@ -63,7 +63,7 @@ void SERCOM1_3_Handler() {
   SerialPlug.IrqHandler();
 }
 
-Uart SerialSocket(&sercom4, PIN_SERIAL_MIDI_RX, PIN_SERIAL_MIDI_TX, SERCOM_RX_PAD_1, UART_TX_PAD_0);
+Uart SerialSocket(&sercom4, PIN_SERIAL_SOCKET_RX, PIN_SERIAL_SOCKET_TX, SERCOM_RX_PAD_1, UART_TX_PAD_0);
 void SERCOM4_0_Handler() {
   SerialSocket.IrqHandler();
 }
@@ -77,7 +77,7 @@ void SERCOM4_3_Handler() {
   SerialSocket.IrqHandler();
 }
 
-Uart SerialSocketNode(&sercom0, PIN_SERIAL_MIDI_RX, PIN_SERIAL_MIDI_TX, SERCOM_RX_PAD_1, UART_TX_PAD_0);
+Uart SerialSocketNode(&sercom0, PIN_SERIAL_SOCKET_NODE_RX, PIN_SERIAL_SOCKET_NODE_TX, SERCOM_RX_PAD_1, UART_TX_PAD_0);
 void SERCOM0_0_Handler() {
   SerialSocketNode.IrqHandler();
 }
@@ -98,12 +98,12 @@ void setSerialPriority(Uart *uart, uint8_t level) {
     NVIC_SetPriority(SERCOM1_1_IRQn, level);
     NVIC_SetPriority(SERCOM1_2_IRQn, level);
     NVIC_SetPriority(SERCOM1_3_IRQn, level);
-  } else if (uart = &SerialSocket) {
+  } else if (uart == &SerialSocket) {
     NVIC_SetPriority(SERCOM4_0_IRQn, level);
     NVIC_SetPriority(SERCOM4_1_IRQn, level);
     NVIC_SetPriority(SERCOM4_2_IRQn, level);
     NVIC_SetPriority(SERCOM4_3_IRQn, level);
-  } else if (uart = &SerialSocketNode) {
+  } else if (uart == &SerialSocketNode) {
     NVIC_SetPriority(SERCOM0_0_IRQn, level);
     NVIC_SetPriority(SERCOM0_1_IRQn, level);
     NVIC_SetPriority(SERCOM0_2_IRQn, level);

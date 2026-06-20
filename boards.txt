@@ -35,6 +35,7 @@
 #   cube             0xe9d0 (wave)
 #   hihat            0xe9e0 (drum)
 #   snare            0xe9f0 (drum)
+#   spot             0xe9b0 (drum)
 #   attune           0xef20 (step)
 #   pi-14537         0xef30 (control)
 
@@ -222,9 +223,13 @@ express.upload.native_usb=true
 
 drum.name=V2 drum
 drum.vid.0=0x6666
-drum.pid.0=0xe9e0
+drum.pid.0=0xda50
+drum.vid.1=0x6666
+drum.pid.1=0xe9e7
+drum.vid.2=0x6666
+drum.pid.2=0xe9f7
 drum.build.vid=0x6666
-drum.build.pid=0xe9e0
+drum.build.pid=0xda50
 drum.build.mcu=cortex-m4
 drum.build.f_cpu=120000000L
 drum.build.cache_flags=-DENABLE_CACHE
@@ -327,6 +332,8 @@ sax.upload.native_usb=true
 step.name=V2 step
 step.vid.0=0x6666
 step.pid.0=0xd9a0
+step.vid.1=0x6666
+step.pid.1=0xe9a7
 step.build.vid=0x6666
 step.build.pid=0xd9a0
 step.build.mcu=cortex-m4
@@ -379,8 +386,10 @@ strip.upload.native_usb=true
 tee.name=V2 tee
 tee.vid.0=0x6666
 tee.pid.0=0xdaa0
+tee.vid.1=0x6666
+tee.pid.1=0xdaa7
 tee.build.vid=0x6666
-tee.build.pid=0xda80
+tee.build.pid=0xdaa0
 tee.build.mcu=cortex-m4
 tee.build.f_cpu=120000000L
 tee.build.cache_flags=-DENABLE_CACHE
@@ -390,7 +399,7 @@ tee.build.usb_manufacturer="Versio Duo"
 tee.build.usb_power=20
 tee.build.board=V2_TEE
 tee.build.core=arduino
-tee.build.extra_flags=-D__SAMD51J19A__ -DV2_TEE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+tee.build.extra_flags=-D__SAMD51J19A__ -DV2_TEE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=16384
 tee.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 tee.build.variant=tee
 tee.build.variant_system_lib=
