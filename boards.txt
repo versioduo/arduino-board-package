@@ -8,16 +8,18 @@
 #   axis             0xd980
 #   beat             0xda30
 #   control          0xd920
+#   connect-hub      0xdac0
 #   connect-plug     0xda90
 #   connect-socket   0xda80
 #   dmx              0xd9b0
-#   express          0xd930
 #   drum             0xda50
+#   express          0xd930
 #   pulse            0xd960
 #   radio            0xda60
 #   sax              0xda70
 #   step             0xd9a0
 #   tee              0xdaa0
+#   spot             0xdab0
 #   strip            0xda20
 #   wave             0xda40
 #   itsybitsy        0xdf50
@@ -35,7 +37,6 @@
 #   cube             0xe9d0 (wave)
 #   hihat            0xe9e0 (drum)
 #   snare            0xe9f0 (drum)
-#   spot             0xe9b0 (drum)
 #   attune           0xef20 (step)
 #   pi-14537         0xef30 (control)
 
@@ -117,6 +118,32 @@ beat.upload.use_1200bps_touch=true
 beat.upload.wait_for_upload_port=true
 beat.upload.native_usb=true
 
+connect-hub.name=V2 connect-hub
+connect-hub.vid.0=0x6666
+connect-hub.pid.0=0xdac0
+connect-hub.build.vid=0x6666
+connect-hub.build.pid=0xdac0
+connect-hub.build.mcu=cortex-m4
+connect-hub.build.f_cpu=120000000L
+connect-hub.build.cache_flags=-DENABLE_CACHE
+connect-hub.build.flags.optimize=-O3
+connect-hub.build.usb_product="V2 connect-hub"
+connect-hub.build.usb_manufacturer="Versio Duo"
+connect-hub.build.usb_power=20
+connect-hub.build.board=V2_CONNECT_HUB
+connect-hub.build.core=arduino
+connect-hub.build.extra_flags=-D__SAMD51J19A__ -DVV2_CONNECT_HUB -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+connect-hub.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+connect-hub.build.variant=connect-hub
+connect-hub.build.variant_system_lib=
+connect-hub.upload.tool=bossac
+connect-hub.upload.protocol=sam-ba
+connect-hub.upload.maximum_size=245760
+connect-hub.upload.offset=0x4000
+connect-hub.upload.use_1200bps_touch=true
+connect-hub.upload.wait_for_upload_port=true
+connect-hub.upload.native_usb=true
+
 connect-plug.name=V2 connect-plug
 connect-plug.vid.0=0x6666
 connect-plug.pid.0=0xda90
@@ -195,6 +222,36 @@ dmx.upload.use_1200bps_touch=true
 dmx.upload.wait_for_upload_port=true
 dmx.upload.native_usb=true
 
+drum.name=V2 drum
+drum.vid.0=0x6666
+drum.pid.0=0xda50
+drum.vid.1=0x6666
+drum.pid.1=0xe9e7
+drum.vid.2=0x6666
+drum.pid.2=0xe9f7
+drum.build.vid=0x6666
+drum.build.pid=0xda50
+drum.build.mcu=cortex-m4
+drum.build.f_cpu=120000000L
+drum.build.cache_flags=-DENABLE_CACHE
+drum.build.flags.optimize=-O3
+drum.build.usb_product="V2 drum"
+drum.build.usb_manufacturer="Versio Duo"
+drum.build.usb_power=20
+drum.build.board=V2_DRUM
+drum.build.core=arduino
+drum.build.extra_flags=-D__SAMD51J19A__ -DV2_DRUM -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+drum.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+drum.build.variant=drum
+drum.build.variant_system_lib=
+drum.upload.tool=bossac
+drum.upload.protocol=sam-ba
+drum.upload.maximum_size=245760
+drum.upload.offset=0x4000
+drum.upload.use_1200bps_touch=true
+drum.upload.wait_for_upload_port=true
+drum.upload.native_usb=true
+
 express.name=V2 express
 express.vid.0=0x6666
 express.pid.0=0xd930
@@ -220,36 +277,6 @@ express.upload.offset=0x4000
 express.upload.use_1200bps_touch=true
 express.upload.wait_for_upload_port=true
 express.upload.native_usb=true
-
-drum.name=V2 drum
-drum.vid.0=0x6666
-drum.pid.0=0xda50
-drum.vid.1=0x6666
-drum.pid.1=0xe9e7
-drum.vid.2=0x6666
-drum.pid.2=0xe9f7
-drum.build.vid=0x6666
-drum.build.pid=0xda50
-drum.build.mcu=cortex-m4
-drum.build.f_cpu=120000000L
-drum.build.cache_flags=-DENABLE_CACHE
-drum.build.flags.optimize=-O3
-drum.build.usb_product="V2 drum"
-drum.build.usb_manufacturer="Versio Duo"
-drum.build.usb_power=20
-drum.build.board=V2_HIHAT
-drum.build.core=arduino
-drum.build.extra_flags=-D__SAMD51J19A__ -DV2_HIHAT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
-drum.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-drum.build.variant=drum
-drum.build.variant_system_lib=
-drum.upload.tool=bossac
-drum.upload.protocol=sam-ba
-drum.upload.maximum_size=245760
-drum.upload.offset=0x4000
-drum.upload.use_1200bps_touch=true
-drum.upload.wait_for_upload_port=true
-drum.upload.native_usb=true
 
 pulse.name=V2 pulse
 pulse.vid.0=0x6666
@@ -328,6 +355,32 @@ sax.upload.offset=0x4000
 sax.upload.use_1200bps_touch=true
 sax.upload.wait_for_upload_port=true
 sax.upload.native_usb=true
+
+spot.name=V2 spot
+spot.vid.0=0x6666
+spot.pid.0=0xdab0
+spot.build.vid=0x6666
+spot.build.pid=0xdab0
+spot.build.mcu=cortex-m4
+spot.build.f_cpu=120000000L
+spot.build.cache_flags=-DENABLE_CACHE
+spot.build.flags.optimize=-O3
+spot.build.usb_product="V2 spot"
+spot.build.usb_manufacturer="Versio Duo"
+spot.build.usb_power=20
+spot.build.board=V2_SPOT
+spot.build.core=arduino
+spot.build.extra_flags=-D__SAMD51J19A__ -DV2_SPOT -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+spot.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+spot.build.variant=spot
+spot.build.variant_system_lib=
+spot.upload.tool=bossac
+spot.upload.protocol=sam-ba
+spot.upload.maximum_size=245760
+spot.upload.offset=0x4000
+spot.upload.use_1200bps_touch=true
+spot.upload.wait_for_upload_port=true
+spot.upload.native_usb=true
 
 step.name=V2 step
 step.vid.0=0x6666
