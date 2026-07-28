@@ -121,6 +121,8 @@ beat.upload.native_usb=true
 connect-hub.name=V2 connect-hub
 connect-hub.vid.0=0x6666
 connect-hub.pid.0=0xdac0
+connect-hub.vid.1=0x6666
+connect-hub.pid.1=0xdac4
 connect-hub.build.vid=0x6666
 connect-hub.build.pid=0xdac0
 connect-hub.build.mcu=cortex-m4
@@ -132,7 +134,7 @@ connect-hub.build.usb_manufacturer="Versio Duo"
 connect-hub.build.usb_power=20
 connect-hub.build.board=V2_CONNECT_HUB
 connect-hub.build.core=arduino
-connect-hub.build.extra_flags=-D__SAMD51J19A__ -DVV2_CONNECT_HUB -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=24576
+connect-hub.build.extra_flags=-D__SAMD51J19A__ -DVV2_CONNECT_HUB -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSERIAL_BUFFER_SIZE=12288
 connect-hub.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 connect-hub.build.variant=connect-hub
 connect-hub.build.variant_system_lib=
