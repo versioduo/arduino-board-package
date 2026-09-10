@@ -7,6 +7,7 @@
 # Hardware:
 #   axis             0xd980
 #   beat             0xda30
+#   beat-4           0xdad0
 #   control          0xd920
 #   connect-hub      0xdac0
 #   connect-plug     0xda90
@@ -117,6 +118,31 @@ beat.upload.offset=0x4000
 beat.upload.use_1200bps_touch=true
 beat.upload.wait_for_upload_port=true
 beat.upload.native_usb=true
+
+beat-4.name=V2 beat-4
+beat-4.vid.0=0x6666
+beat-4.pid.0=0xdad0
+beat-4.build.vid=0x6666
+beat-4.build.pid=0xdad0
+beat-4.build.mcu=cortex-m4
+beat-4.build.f_cpu=120000000L
+beat-4.build.cache_flags=-DENABLE_CACHE
+beat-4.build.flags.optimize=-O3
+beat-4.build.usb_product="V2 beat"
+beat-4.build.usb_manufacturer="Versio Duo"
+beat-4.build.usb_power=20
+beat-4.build.board=V2_BEAT4
+beat-4.build.core=arduino
+beat-4.build.extra_flags=-D__SAMD51G19A__ -DV2_BEAT4 -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4  -mfloat-abi=hard -mfpu=fpv4-sp-d16
+beat-4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+beat-4.build.variant=beat-4
+beat-4.build.variant_system_lib=
+beat-4.upload.tool=bossac
+beat-4.upload.protocol=sam-ba
+beat-4.upload.maximum_size=245760
+beat-4.upload.offset=0x4000
+beat-4.upload.use_1200bps_touch=true
+beat-4.upload.wait_for_upload_port=true
 
 connect-hub.name=V2 connect-hub
 connect-hub.vid.0=0x6666
